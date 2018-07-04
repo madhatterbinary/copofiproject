@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <script src=https://code.jquery.com/jquery-3.2.1.min.js></script>
+    <title>Music Shop / React</title>
+  </head>
+  <body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Visit our Sponsors</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Login
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+        <!-- Page Content -->
+    <div class="container">
+      <!-- Jumbotron Header -->
+      <header class="jumbotron my-4">
+        <video autoplay muted loop id="myVideo" controls muted>
+              <source src="guitar.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+        </video>
+        <div class="headlines">
+        <h1 class="display-3">Music On Demand</h1>
+        <p class="lead">Presently, music-on-demand is still the center of controversy with a focus on illegal music downloading, peer-to-peer file swapping and the lag of legislation for rapidly changing technology on the Internet. Record labels represented by the RIAA, as well as publishers and songwriters, have vigorously defended copyrighted materials and have been successful in enforcing current laws for protecting their intellectual property.</p>
+        </headlines>
+      </header>
+
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+    </div>
+    <script>
+      var video = document.getElementById("myVideo");
+      var btn = document.getElementById("myBtn");
+      
+      function myFunction() {
+        if (video.paused) {
+          video.play();
+          btn.innerHTML = "Pause";
+        } else {
+          video.pause();
+          btn.innerHTML = "Play";
+        }
+      }
+      </script>
+  </body>
+</html>
