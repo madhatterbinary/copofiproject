@@ -136,7 +136,7 @@ module.exports = {
             test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
             loader: require.resolve('url-loader'),
             options: {
-              limit: 100000,
+              limit: 10000,
               name: '[path][name]-[hash:8].[ext]',
             },
           },
@@ -262,5 +262,5 @@ module.exports = {
   // cumbersome.
   performance: {
     hints: false,
-  },
+  }
 };
