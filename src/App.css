@@ -1,3 +1,31 @@
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:100,300,500,700");
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
+a:any-link {
+  color: grey;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  background-color:transparent;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
 .sort-container {
   margin-bottom: 20px;
 }

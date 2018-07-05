@@ -6,6 +6,8 @@ import ThumbnailList from "./components/Gallery/ThumbnailList/ThumbnailList";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import * as actions from "./store/actions/index";
+import 'typeface-roboto';
+
 
 class App extends Component {
   constructor(props) {
