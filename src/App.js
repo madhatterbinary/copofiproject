@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import "./bootstrap.min.css";
-import "./heroic-features.css";
 import "./App.css";
 import ThumbnailList from "./components/Gallery/ThumbnailList/ThumbnailList";
 import { connect } from "react-redux";
@@ -21,10 +19,6 @@ class App extends Component {
     this.props.onGetSongs();
   }
   render() {
-    console.log('the props ',this.props);
-    console.log('the search ',this.props.search);
-    console.log('the songs ',this.props.songs);
-    
     let loadSongs;
 
       if(this.props.emptySearchActive){

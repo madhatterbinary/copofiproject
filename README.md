@@ -44,7 +44,7 @@ TOOLINGS:
 
 2 - The project uses also PostCSS instead of processors like SASS, saving on performance and file size.This project didn't actually needed to use any preprocessor for the simplicity of the layout considering that Bootstrap 4 is used.
 
-3 - PostCSS follows similar style patterns as SASS but it is only used for general style, while for components style each css file is created within eah component folder.
+3 - PostCSS is installed and ready to be use. The project, however, uses Bootstrap 4 and changes to it are made by custom.css.
 
 4 - The project is integrated with Redux library. It is only uses in the HOC, (SearchBox.jsx, App.jsx) to fetch data from the server.
 

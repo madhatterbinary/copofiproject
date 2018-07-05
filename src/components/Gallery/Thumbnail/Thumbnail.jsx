@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import Button from "../../Buttons/Button";
-import css from "./Thumbnail.css";
 
 export default class Thumbnail extends Component {
   render() {
     let songsLoaded;
+
     if(this.props.artworkUrl100) {
       songsLoaded = (
         <div className="card">
@@ -21,7 +21,7 @@ export default class Thumbnail extends Component {
           <p className="card-text">{this.props.artistName}</p>
         </div>
         <div className="card-footer">
-          <Button href={this.props.previewUrl} />
+          <Button href={this.props.trackViewUrl} />
         </div>
       </div>
       );

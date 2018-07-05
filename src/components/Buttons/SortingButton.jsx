@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import css from "./SortingButton.css"
 
 export default class SortingButton extends Component {
   render() {

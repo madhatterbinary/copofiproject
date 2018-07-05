@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import css from "./Button.css";
 
 export default class Button extends Component {
   render() {

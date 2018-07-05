@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import css from "./SearchBox.css";
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import * as actions from "../../../store/actions/index";
@@ -13,7 +12,6 @@ class SearchBox extends Component {
     submit(e) {
         e.preventDefault();
         const name = e.target.search.value;
-        console.log('name typed ',name)
         if(name === '') {
             this.props.emptySearchActive(true);
         } else {
@@ -23,7 +21,6 @@ class SearchBox extends Component {
     }
     handleChange(event) {
     const name = event.target.value;
-    console.log('name typed ',event.target.value);
     if(name === '') {
           this.props.emptySearchActive(true);
         } else {

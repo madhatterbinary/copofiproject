@@ -29,7 +29,6 @@ export const getSongs = () => {
         axios.get( 'us/rss/topalbums/limit=100/json')
             .then( res => {
                 const fetchedSongs = [];
-                console.log('res.data.feed.entry getSongs ',res.data.feed.entry);
                 for ( let key in res.data.feed.entry ) {
                     fetchedSongs.push( {
                         ...res.data.feed.entry[key],

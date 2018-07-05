@@ -35,7 +35,6 @@ export const getSearchSongs = (name) => {
         dispatch(getSearchSongsStart());
         axios.get( `search?term=${name}&limit=100&entity=song`)
             .then( res => {
-                console.log('res.data.results getSearchSongs ',res.data.results)
                 const fetchedSearchSongs = [];
                 for ( let key in res.data.results ) {
                     fetchedSearchSongs.push( {
