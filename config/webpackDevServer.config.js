@@ -70,6 +70,10 @@ module.exports = function(proxy, allowedHost) {
     // Enable HTTPS if the HTTPS environment variable is set to 'true'
     https: protocol === 'https',
     host: host,
+    headers: { "Access-Control-Allow-Origin": "http://localhost:3000",
+    "Access-Control-Allow-Credentials": "true",
+    "Access-Control-Allow-Headers": "Content-Type, Authorization, x-id, Content-Length, X-Requested-With",
+    "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS" },
     overlay: false,
     historyApiFallback: {
       // Paths with dots should still use the history fallback.
@@ -87,6 +91,12 @@ module.exports = function(proxy, allowedHost) {
       // it used the same host and port.
       // https://github.com/facebookincubator/create-react-app/issues/2272#issuecomment-302832432
       app.use(noopServiceWorkerMiddleware());
+      app.use(function(req, res, next) {
+        res.header("Access-Control-Allow-Origin", "*");
+        res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+        next();
+      });
+      
     },
   };
 };
